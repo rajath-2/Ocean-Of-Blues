@@ -1,4 +1,4 @@
-# Ocean-of-blues
+# Ocean-Of-Blues
 A custom css theme for Zen browser (inspired by bubble-clean)
 
 # Preview⏯️:
