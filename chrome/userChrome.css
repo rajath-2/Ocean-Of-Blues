@@ -422,6 +422,9 @@ toolbarbutton.bookmark-item:nth-child(1){
 #zen-sidebar-top-buttons{
   margin-bottom: 10px !important;
 }
+#urlbar{
+  margin-bottom: 3px !important;
+}
 
 /* make pins look like essentials and adds background to the container*/
    @media (-moz-bool-pref: "uc.pins.legacy-layout") {
