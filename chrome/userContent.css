@@ -184,6 +184,57 @@ html[dark], #background {
   }
 }
 
+  @-moz-document domain(threads.net){
+    *{
+      background-color: transparent !important;
+    }
+    .x7c8izy{
+      background-color: rgba(0, 0, 0, 0.15) !important;
+    }
+    .xjbqb8w:hover{
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      border-radius: 10px !important;
+    }
+    div.x1pq812k:nth-child(2){
+      background-color: rgba(0, 0, 0, 0.15) !important;
+      border-radius: 15px !important;     
+    }
+    div.x1afcbsf:nth-child(1) > div:nth-child(2){
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      border-radius: 10px !important;
+      backdrop-filter: blur(8px) !important;
+    }
+    .x1e3a9a0{
+      background-color: rgba(0, 0, 0, 0.4) !important;
+      border-radius: 10px !important;
+      backdrop-filter: blur(8px) !important;
+    }
+    div.xfex06f:nth-child(2){
+      background-color: rgba(255, 255, 255, 0.15) !important;
+      border-radius: 20px !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    .x1pim928{
+      box-shadow: none !important;
+    }
+    .x13fuv20{
+      border-top-style: none !important;
+    }
+    .xu3j5b3{
+      border-right-style: none !important;
+    }
+    .x26u7qi{
+      border-left-style: none !important;
+    }
+    .x1l19134{
+      border-bottom: transparent !important;
+      margin-top: 8px !important;
+    }
+    div.xz401s1:nth-child(3){
+      background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+  }
+
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing), url(chrome://browser/content/browser.xul) {
     body {
         width: 100%;
