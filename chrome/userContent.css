@@ -84,6 +84,37 @@
   }
 }
 
+/* turn off Ambient Mode in Video Player Settings to get it all transparent. */
+@-moz-document domain(youtube.com) {
+html[dark], #background {
+        background: var(--content-bg) !important;
+    }
+    #guide-inner-content {
+        scrollbar-width: none !important;
+    }
+    :root {
+        --yt-spec-base-background: var(--stacking-bg) !important;
+        --app-drawer-content-container-background-color: var(--stacking-bg) !important;
+        --dark-theme-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-tooltip-background-color: var(--stacking-bg) !important;
+        --paper-dialog-background-color: var(--stacking-bg) !important;
+        --paper-listbox-background-color: var(--stacking-bg) !important;
+        --paper-menu-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-action-panel-background-color-transparent: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-additive-background-inverse: var(--stacking-bg) !important;
+        --yt-live-chat-author-chip-verified-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-background-color: var(--stacking-bg) !important;;
+        --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
+    }
+}
+
 @-moz-document domain(instagram.com){
   *{
     background-color: transparent !important;
