@@ -147,6 +147,10 @@
     background-color: rgba(255, 255, 255, 0.2) !important;
     border-radius: 20px !important;
   }
+  .x1yvgwvq{
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 15px !important;
+  }
 }
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing), url(chrome://browser/content/browser.xul) {
