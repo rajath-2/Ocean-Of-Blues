@@ -144,9 +144,9 @@ html[dark], #background {
     --mwp-message-row-background: transparent !important;
   }
   .x1u3tz30{
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.55) !important;
     border-radius: 5px !important;
-    backdrop-filter: blur(5px) !important; 
+    backdrop-filter: blur(10px) !important; 
   }
   .xmnaoh6 > div:nth-child(1) > div:nth-child(1){
     padding-left: 8px !important;
@@ -160,7 +160,7 @@ html[dark], #background {
   .xq9evs9{
     background-color: rgba(0, 0, 0, 0.4) !important;
     border-radius: 5px !important;
-    backdrop-filter: blur(5px) !important; 
+    backdrop-filter: blur(10px) !important; 
   }
   .x1l895ks:hover{
     background-color: rgba(0, 0, 0, 0.3) !important;
