@@ -113,6 +113,11 @@ html[dark], #background {
         --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
         --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
     }
+      #chips-wrapper{
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(10px) !important;
+      }
 }
 
 @-moz-document domain(instagram.com){
