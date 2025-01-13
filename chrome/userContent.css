@@ -321,3 +321,73 @@ html[dark], #background {
         margin-block-end: 14px !important;
     }
 }
+
+@-moz-document domain(monkeytype.com) {
+  body {
+    background: transparent !important;
+  }
+}
+
+@-moz-document domain(discord.com) {
+  :root {
+    .layer_cd0de5 :is([role="dialog"], .streamPreview_adbea6) {
+      background: hsl(var(--primary-700-hsl)) !important;
+    }
+
+    --primary-560: rgba(0, 0, 0, 0.05) !important;
+    --primary-600: rgba(0, 0, 0, 0.05) !important;
+    --primary-630: rgba(0, 0, 0, 0.05) !important;
+    --primary-645: rgba(0, 0, 0, 0.05) !important;
+    --primary-660: rgba(0, 0, 0, 0.05) !important;
+    --primary-700: rgba(0, 0, 0, 0.05) !important;
+    --primary-730: rgba(0, 0, 0, 0.05) !important;
+    --primary-760: rgba(0, 0, 0, 0.05) !important;
+    --primary-830: rgba(0, 0, 0, 0.05) !important;
+    --primary-860: rgba(0, 0, 0, 0.05) !important;
+    --primary-900: rgba(0, 0, 0, 0.05) !important;
+  }
+
+  [class^="focusLock_"] {
+    --saturation-factor: 1;
+    --primary-600: hsl(var(--primary-600-hsl) / 1) !important;
+    --primary-600-hsl: 222.857 calc(var(--saturation-factor, 1) * 6.667%)
+      20.588% !important;
+    --modal-background: var(--primary-600);
+  }
+
+  .no-webkit-scrollbar * {
+    scrollbar-width: none !important;
+  }
+}
+
+@-moz-document domain(x.com) {
+  :root {
+    --theme-popup: rgba(0, 0, 0, 0.8);
+    --theme-bg-dim: rgba(0 ,0, 0, 0.4);
+  }
+
+  body {
+    background-color: var(--theme-bg-dim) !important;
+  }
+
+  [data-testid="primaryColumn"],
+  [aria-label="Trending"] > * > *,
+  [aria-label="Home timeline"] > *> *,
+  [aria-label="Search"] > * {
+    background: transparent !important;
+  }
+  
+  select,
+	[data-testid="Dropdown"],
+	[data-testid="hoverCardParent"],
+	[data-testid="DMDrawer"] > div,
+	div[role="dialog"],
+	div[role="listbox"],
+	div[role="radio"] {
+		background: var(--theme-popup) !important;
+	}
+
+  .r-kemksi, .r-5zmot {
+    background: transparent !important;
+  }
+}
