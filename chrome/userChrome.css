@@ -189,6 +189,7 @@
 tab-group { /* thanks to the few people making + updating this part of the css */
   display: grid !important;
   background: color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent) !important;
+  box-shadow: 0px 1px 5px color-mix(in srgb, var(--tab-group-color-invert) 10%, transparent) !important;
   border-radius: var(--border-radius-medium);
   margin-bottom: 4px;
   margin-inline: 2px !important;
