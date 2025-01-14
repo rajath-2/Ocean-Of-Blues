@@ -349,9 +349,8 @@ toolbarbutton.bookmark-item:nth-child(1){
   --uc-tweak-rounded-corners-shadow-color: #141515 !important;
 }
   #tabbrowser-tabpanels{   /* use this only if you want a border around the tab-view pannel and create a visual seperation from sidebar */
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1) !important;
     background-color: rgb(55, 66, 89, 0.4) !important;
-    border: 2px solid #ffffff0a !important;
     border-radius: 5px !important;
   }
 
