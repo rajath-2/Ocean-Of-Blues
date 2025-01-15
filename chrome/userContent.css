@@ -177,18 +177,26 @@ html[dark], #background {
   }
   .xrrpcnn{
     background-color: rgba(0, 0, 0, 0.3) !important;
-    border-radius: 20px !important;
+    border-radius: 1.5rem !important;
   }
   .xpmdkuv{
     background-color: rgba(255, 255, 255, 0.2) !important;
-    border-radius: 20px !important;
+    border-radius: 1.5rem !important;
   }
   .x1yvgwvq{
     background-color: rgba(255, 255, 255, 0.2) !important;
-    border-radius: 15px !important;
+    border-radius: 1rem !important;
   }
   .x1tu34mt{
     background-color: rgb(var(--ig-primary-button)) !important;
+  }
+  div.x1afcbsf{
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(10px) !important; 
+  }
+  .xleuxlb > div:nth-child(1){
+    border-right: transparent !important;
   }
 }
 
