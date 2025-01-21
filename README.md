@@ -5,6 +5,13 @@ A custom css theme for Zen browser (inspired by bubble-clean)
 
 https://github.com/user-attachments/assets/eba3c534-d345-4f8d-9937-93ea471151f5
 
+## Additions:
+added gradient colours to tabs and essentials </br>
+the changes are commented out below the original code </br>
+
+https://github.com/user-attachments/assets/df0f34ec-cf35-4d6a-9b68-c43ceb49fcb6
+
+ 
 Follow https://docs.zen-browser.app/guides/live-editing to get started with editing userChrome.css
 
 ## Zen Mods used:
