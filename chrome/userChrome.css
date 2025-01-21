@@ -102,7 +102,7 @@
     #tabbrowser-tabs &:not([zen-essential="true"]) {
       &:is([selected], [multiselected], [visuallyselected]) .tab-background {
   box-shadow: none !important;
-  border: 2px solid rgb(90, 108, 87,0.3) !important;
+  border-top: 2px solid rgb(90, 108, 87,0.3) !important;
   border-bottom: 1px solid rgb(133, 169, 143, 0.3) !important;
   border-right: none !important;
   background: linear-gradient(90deg, rgba(179,200,207,0.3) 20%, rgba(25,90,129,0.2) 100%) !important;
