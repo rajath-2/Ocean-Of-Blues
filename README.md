@@ -9,9 +9,9 @@ https://github.com/user-attachments/assets/eba3c534-d345-4f8d-9937-93ea471151f5
 added gradient colours to tabs and essentials </br>
 the changes are commented out below the original code </br>
 
-https://github.com/user-attachments/assets/df0f34ec-cf35-4d6a-9b68-c43ceb49fcb6
+https://github.com/user-attachments/assets/d8a54f9a-6578-4e57-853f-2720a01e9948
 
- 
+
 Follow https://docs.zen-browser.app/guides/live-editing to get started with editing userChrome.css
 
 ## Zen Mods used:
