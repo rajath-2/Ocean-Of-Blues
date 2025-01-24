@@ -1,77 +1,71 @@
 /* Change the background color of the first pinned tab */
-.tabbrowser-tab[pinned]:nth-of-type(1) .tab-background {
+#zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1) {
   background-color: rgb(255, 248, 230, 0.2) !important;
   box-shadow: none !important;
 }
 
 /* Change the background color of the second pinned tab */
-.tabbrowser-tab[pinned]:nth-of-type(2) .tab-background {
+#zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1) {
   background-color: rgb(77, 161, 169, 0.2) !important;
   box-shadow: none !important;
 }
 
 /* Change the background color of the third pinned tab */
-.tabbrowser-tab[pinned]:nth-of-type(3) .tab-background {
+#zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1) {
   background-color: rgb(225, 106, 84, 0.2) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the first pinned tab hover */
-.tabbrowser-tab[pinned]:nth-of-type(1)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background-color: rgb(214, 207, 180,0.22) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the second pinned tab hover */
-.tabbrowser-tab[pinned]:nth-of-type(2)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background-color: rgba(161, 197, 255,0.22) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the third pinned tab hover */
-.tabbrowser-tab[pinned]:nth-of-type(3)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background-color: rgb(232, 188, 185, 0.22) !important;
   box-shadow: none !important;
 }
 /*
 /* Change the background color of the first pinned tab 
-.tabbrowser-tab[pinned]:nth-of-type(1) .tab-background {
+#zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1) {
   background: linear-gradient(77deg, rgba(217,224,224,0.2) 0%, rgba(13,16,16,0.4) 85%) !important;
   box-shadow: none !important;
 }
 
 /* Change the background color of the second pinned tab 
-.tabbrowser-tab[pinned]:nth-of-type(2) .tab-background {
+#zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1) {
   background: linear-gradient(140deg, rgba(161,197,255,0.2) 0%, rgba(13,16,16,0.4) 85%) !important;
   box-shadow: none !important;
 }
 
 /* Change the background color of the third pinned tab 
-.tabbrowser-tab[pinned]:nth-of-type(3) .tab-background {
+#zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1) {
   background: linear-gradient(110deg, rgba(190,49,68,0.3) 0%, rgba(13,16,16,0.4) 85%) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the first pinned tab hover 
-.tabbrowser-tab[pinned]:nth-of-type(1)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background: radial-gradient(circle, rgba(245,229,229,0.6) 0%, rgba(13,23,34,0.3) 60%) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the second pinned tab hover 
-.tabbrowser-tab[pinned]:nth-of-type(2)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background: radial-gradient(circle, rgba(161,197,255,0.3) 0%, rgba(13,23,34,0.3) 60%) !important;
   box-shadow: none !important;
 }
 
 /* Change the HOVER background color of the third pinned tab hover 
-.tabbrowser-tab[pinned]:nth-of-type(3)
-  .tab-background:is([selected], [multiselected]) {
+#zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1):is([selected],[multiselected]) {
   background: radial-gradient(circle, rgb(190, 49, 68, 0.6) 0%, rgba(13,23,34,0.2) 60%) !important;
   box-shadow: none !important;
 }
