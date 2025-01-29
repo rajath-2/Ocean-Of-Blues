@@ -110,6 +110,21 @@
   z-index: 4000000 !important;
 }
 
+/* Animate new tab appear animation bounce */
+#vertical-pinned-tabs-container, #tabbrowser-arrowscrollbox {
+  .tabbrowser-tab {
+    animation: new-tab-appear 0.45s ease-in-out !important;
+  }
+}
+
+@keyframes new-tab-appear { 
+ 0%, 100% {transform: translateY(0);}
+	50% {transform: translateY(5px);}
+	30% {transform: translateY(-7px);}
+  10% {transform: translateY(5px);}
+  0%  {transform: scale(0.1);}
+}
+
 
 .tab-reset-button {
   width: 18px !important;
