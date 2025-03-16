@@ -16,6 +16,9 @@
     #comment-tree {
       background: transparent !important;
     }
+    #flex-left-nav-container{
+      background: rgba(0, 0, 0, 0.1) !important;
+    }
     .bg-neutral-background,
     .bg-neutral-background-weak {
       background: rgba(0, 0, 0, 0.1) !important;
@@ -168,7 +171,10 @@
   .x1tu34mt{
     background-color: rgb(var(--ig-primary-button)) !important;
   }
-
+  .xgf5ljw {
+    background: rgba(141, 141, 141, 0.3) !important;
+    backdrop-filter: blur(20px);
+  }
 }
 
 /*@-moz-document domain(youtube.com) {
@@ -419,13 +425,17 @@
 
 /* ==== PDF viewer tweaks ====  entierly from natsumi*/
 
+/* ==== PDF viewer tweaks ==== */
+
 @keyframes pdfjs-appear {
   from {
     opacity: 0;
+    filter: blur(5px);
   }
 
   to {
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -433,11 +443,13 @@
   0% {
     opacity: 0;
     margin-top: -10px;
+    filter: blur(5px);
   }
 
   100% {
     opacity: 1;
     margin-top: 0;
+    filter: blur(0);
   }
 }
 
@@ -451,38 +463,6 @@
     opacity: 1;
     top: 0;
   }
-}
-
-* {
-  /* Colors */
-  --natsumi-primary-color: var(--natsumi-pages-accent-color, #aac7ff);
-  --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
-  --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
-  --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 2%, white 98%);
-  --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
-
-  @media (prefers-color-scheme: dark) {
-    --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #202020 80%);
-    --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #202020 70%);
-    --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 1%, #202020 99%);
-    --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
-
-    @media (-moz-bool-pref: 'zen.theme.color-prefs.colorful') {
-      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
-      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%);
-      --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%);
-      --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
-    }
-  }
-
-  /* Glass effect */
-  --natsumi-glass-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
-  --natsumi-glass-blur-radius: var(--glass-blur-radius, 10px);
-  --natsumi-glass-shadow-size: var(--glass-shadow-size, 10px);
-  --natsumi-glass-shadow-opacity: var(--glass-shadow-opacity, 75%);
-
-  /* pdf.js */
-  --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px);
 }
 
 @media not (-moz-bool-pref: "natsumi.pdfjs.disabled") {
@@ -502,17 +482,23 @@
           background-color: transparent !important;
         }
       }
-      div.page:nth-child(1) > div:nth-child(1) > canvas:nth-child(1){
-
-            border-radius: 5px !important;
-          }
-    
 
       #viewerContainer {
         inset: 0 !important;
 
-        #viewer .page:first-of-type {
-          margin-top: 60px !important;
+        #viewer > .page:first-of-type,
+        #viewer .spread:first-of-type .page {
+          margin-top: 43px !important;
+          transition: margin-top 0.3s ease;
+        }
+      }
+
+      .toolbar {
+        width: 100%;
+        height: 10px;
+
+        @media (-moz-bool-pref: "natsumi.theme.compact-marginless") {
+          height: 15px;
         }
       }
 
@@ -534,13 +520,12 @@
         padding-bottom: 5px !important;
         height: calc(var(--toolbar-height) + 10px) !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
         animation: pdfjs-appear 0.3s ease;
         overflow: hidden !important;
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         &:has(#loadingBar.hidden) {
@@ -560,8 +545,8 @@
           backdrop-filter: blur(10px);
           border-radius: 10px !important;
           border: 1px solid rgba(20, 20, 20, 0.2) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-          animation: secondary-appear 0.2s ease;
+          box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+          animation: secondary-appear 0.3s ease;
 
           &.hidden {
             animation: none !important;
@@ -569,7 +554,6 @@
 
           @media (prefers-color-scheme: dark) {
             border-color: rgba(235, 235, 235, 0.3) !important;
-            box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
           }
 
           &::before, &::after {
@@ -602,13 +586,13 @@
         top: auto !important;
         bottom: 5px !important;
         opacity: 0 !important;
-        transition: left 0.2s ease, opacity 0.2s ease !important;
+        transition: left 0.2s ease, opacity 0.2s ease, filter 0.2s ease !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+        filter: blur(5px);
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         #toolbarSidebar {
@@ -668,6 +652,7 @@
       #outerContainer.sidebarOpen #sidebarContainer {
         left: 5px !important;
         opacity: 1 !important;
+        filter: blur(0);
       }
 
       #scaleSelectContainer {
@@ -721,6 +706,12 @@
         &.toggled {
           background-color: var(--toolbarbutton-active-background) !important;
         }
+
+        &::before {
+          mask-size: contain !important;
+          mask-repeat: no-repeat;
+          -moz-context-properties: fill;
+        }
       }
 
       /* Document properties */
@@ -730,11 +721,10 @@
         backdrop-filter: blur(10px);
         border-radius: 10px !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         &:is([open]) {
@@ -747,6 +737,59 @@
 
           @media (prefers-color-scheme: dark) {
             background-color: #363636 !important;
+          }
+        }
+      }
+
+      /* Compact mode */
+
+      @media (-moz-bool-pref: "natsumi.pdfjs.compact") {
+        .toolbar {
+          #toolbarContainer {
+            opacity: 0 !important;
+            pointer-events: none;
+            top: -5px !important;
+            transition: opacity 0.3s ease, top 0.3s ease, filter 0.3s ease;
+            filter: blur(5px);
+          }
+
+          &:hover, &:has(.toolbarButton:not(#sidebarToggleButton)[aria-expanded="true"]),
+          &:has(input:focus), &:has(select:focus) {
+            height: 52px;
+
+            #toolbarContainer {
+              top: 5px !important;
+              opacity: 1 !important;
+              pointer-events: auto;
+              filter: blur(0);
+            }
+          }
+        }
+
+        @media (-moz-bool-pref: "natsumi.pdfjs.compact-dynamic") {
+          .toolbar:has(#sidebarToggleButton[aria-expanded="true"]) {
+            height: 52px;
+
+            #toolbarContainer {
+              top: 5px !important;
+              opacity: 1 !important;
+              pointer-events: auto;
+              filter: blur(0);
+            }
+          }
+
+          &:has(#sidebarToggleButton:not([aria-expanded="true"])) {
+            #viewer > .page:first-of-type,
+            #viewer .spread:first-of-type .page {
+              margin-top: 0 !important;
+            }
+          }
+        }
+
+        @media not (-moz-bool-pref: "natsumi.pdfjs.compact-dynamic") {
+          #viewer > .page:first-of-type,
+          #viewer .spread:first-of-type .page {
+            margin-top: 0 !important;
           }
         }
       }
@@ -770,7 +813,7 @@
       }
 
       #sidebarToggleButton::before {
-        mask-image: url('chrome://browser/skin/sidebars.svg') !important;
+        mask-image: url('chrome://browser/skin/zen-icons/sidebar.svg') !important;
       }
 
       #editorHighlightButton::before {
@@ -900,7 +943,52 @@
     }
   }
 }
-/*change font for all websites*/
+
+* {
+  /* Colors */
+  --natsumi-primary-color: var(--natsumi-pages-accent-color, #aac7ff);
+  --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+  --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+  --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 2%, white 98%);
+  --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #202020 80%);
+    --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #202020 70%);
+    --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 1%, #202020 99%);
+    --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+    @media (-moz-bool-pref: 'zen.theme.color-prefs.colorful') {
+      --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+      --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%);
+      --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%);
+      --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+    }
+  }
+
+  /* Glass effect */
+  --natsumi-glass-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
+  --natsumi-glass-blur-radius: var(--glass-blur-radius, 10px);
+  --natsumi-glass-shadow-size: var(--glass-shadow-size, 10px);
+  --natsumi-glass-shadow-opacity: var(--glass-shadow-opacity, 75%);
+  --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black);
+
+  @media (prefers-color-scheme: dark) {
+    --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white);
+
+    @media (-moz-bool-pref: "natsumi.theme.force-dark-shadows") {
+      --natsumi-glass-shadow-color: color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black);
+    }
+  }
+
+  /* pdf.js */
+  --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px);
+
+  /* FF home */
+  --natsumi-home-bg: var(--home-background-url, none);
+} 
+
+
 * {
   font-family: "JetBrains Mono", monospace !important;
 }
