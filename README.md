@@ -3,9 +3,10 @@ A custom css theme for Zen browser (inspired by many themes)
 
 
 # Preview⏯️:
-![image](https://github.com/user-attachments/assets/3026c834-21f8-43f7-9576-28b0d651f9e4)
-![image](https://github.com/user-attachments/assets/6d349393-ed59-4f3e-895a-f4b6a2992957)
-![image](https://github.com/user-attachments/assets/414292fc-67d2-49ce-bdac-761fed3128aa)
+![image](https://github.com/user-attachments/assets/25b989bd-bd1d-40ef-a22b-a75a1606fa9c)
+
+![image](https://github.com/user-attachments/assets/7c8a5648-392f-4f86-bbef-afcb9a76e00a)
+
 
 
 https://github.com/user-attachments/assets/4de7329a-2402-497b-adb0-8c64962b56b2
