@@ -24,3 +24,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
+
+/*download the files from natsumi and place it in your chrome folder https://github.com/greeeen-dev/natsumi-browser/tree/main/natsumi/modules*/
+@import url(./natsumi-urlbar.css); /* refer natsumi for the specified files*/
+@import url(./preload.css);
+@import url(./natsumi-loading.css);
