@@ -10,7 +10,7 @@ A custom css theme for Zen browser (inspired by many themes)
 
 ## note:
 no zen mods are used for the theme</br>
-try out the theme to discover amazing animations from bouncing of tabs when new tab is opened to smooth url bar animation(slightly different from natsumi) with cool animations all around inspired by sameerasw
+try out the theme to discover amazing animations from bouncing of tabs when new tab is opened to smooth url bar animation(slightly different from natsumi) with cool animations all around inspired by sameerasw. the theme even contains transpartent css code for multiple websites like instagram reddit youtube etc.
 
 ## Css used from other themes:
 the url bar is from natsumi: https://github.com/greeeen-dev/natsumi-browser/blob/main/natsumi/modules/patches.css </br>
