@@ -29,9 +29,7 @@ their author(s) have been provided in the read me text.
 
 
 /*download the files from natsumi and place it in your chrome folder https://github.com/greeeen-dev/natsumi-browser/tree/main/natsumi/modules*/
-@import url(./natsumi-urlbar.css); /* refer natsumi for the specified files*/
-@import url(./preload.css);
-@import url(./natsumi-loading.css);
+@import url(./natsumi-files.css); /* refer natsumi for the specified files*/
 
 * {
   font-family: "JetBrains Mono", monospace !important;
