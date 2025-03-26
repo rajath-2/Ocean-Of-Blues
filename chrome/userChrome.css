@@ -1,5 +1,5 @@
 /*download the files from natsumi and place it in your chrome folder https://github.com/greeeen-dev/natsumi-browser/tree/main/natsumi/modules*/
-@import url(./natsumi-urlbar.css);
+@import url(./natsumi-urlbar.css); /* refer natsumi for the specified files*/
 @import url(./preload.css);
 @import url(./natsumi-loading.css);
 
@@ -13,12 +13,32 @@
   --panel-separator-color: rgba(0, 0, 0, 0.17) !important;
   --zen-appcontent-border: none !important;
 }
-
+/*media control tweaks*/
 #zen-media-controls-toolbar > toolbaritem:nth-child(1){
 	background: rgba(0,0,0, 0.2) !important;
 	filter: saturate(140%) !important;
-	backdrop-filter: blur(20px) !important;
+	backdrop-filter: blur(20px)  !important;;
 	border: 1.5px solid rgb(179,200,207,0.4) !important;
+}
+
+/*glance tab tweaks*/
+.browserSidebarContainer.zen-glance-overlay {
+  & .browserContainer{
+		background: var(--zen-main-browser-background) !important;
+		-webkit-backdrop-filter: blur(5px) !important;
+		backdrop-filter: blur(10px) !important;
+		position: relative;
+		border-radius: 10px !important;
+		&::before{
+		content: '' !important;
+		position: absolute;
+		height: 100% !important;
+		width: 100% !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(15px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.45);
+	}
+}
 }
 
 /* Remove new tab background color */
@@ -277,10 +297,7 @@ toolbarbutton.titlebar-button:nth-child(4){
 }
 
 
-#tab-preview-panel {
-  --panel-background: var(--zen-main-browser-background) !important;
-  z-index: 4000000 !important;
-}
+
 .tab-reset-button {
   width: 18px !important;
   height: 18px !important;
@@ -329,6 +346,8 @@ toolbarbutton.titlebar-button:nth-child(4){
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1) !important;
   border-radius: 8px !important;
   border: 2px solid #ffffff0a !important;
+	container-type: initial !important;
+	width: auto !important;
 }
 #zen-workspaces-button {
   .subviewbutton {
@@ -344,15 +363,7 @@ toolbarbutton.titlebar-button:nth-child(4){
     }
   }
 }
-#zen-current-workspace-indicator {
-  justify-content: center !important;
-}
-#zen-current-workspace-indicator-name {
-  padding-left: 0 !important;
-}
-#zen-current-workspace-indicator-icon {
-  display: none !important;
-}
+
 
 /* makes the icons look nicer*/
 .zen-workspace-icon {
@@ -401,8 +412,6 @@ toolbarbutton.titlebar-button:nth-child(4){
   scale: 0.9;
 }
 
-
-
 /* dims copy link extension icon */
 #_4f2a7aa8-cbe9-49cd-9cf9-5a3ec0c48476_-BAP {     /* use selector from browser toolbox to copy css selector for the extension */
   opacity: 0.1;
@@ -416,12 +425,12 @@ toolbarbutton.titlebar-button:nth-child(4){
 /* bookmarks tweasks*/
 /*context menu transparency*/
 menupopup {
-    --panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, black 70%) !important;
+    --panel-background: color-mix(in srgb, var(--zen-primary-color) 30%, black 60%) !important;
 }
 
 /*menu transparency*/
 panel {
---panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, black 70%) !important;
+--panel-background: color-mix(in srgb, var(--zen-primary-color) 30%, black 60%) !important;
 }
 @media (-moz-bool-pref: "uc.bookmarks.center-toolbar") {
   #PlacesToolbarItems {
@@ -478,12 +487,11 @@ toolbarbutton.bookmark-item:nth-child(1) {
 #bookmarksPanel {
   background-color: rgb(84, 91, 119, 0.5) !important;
   -webkit-backdrop-filter: blur(5px) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(10px) saturate(180%);
 }
 #sidebar-box {
   background-color: rgb(84, 91, 119, 0.8) !important;
-  -webkit-backdrop-filter: blur(5px) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(10px) saturate(180%);
 }
 
 /* Drop Shadow */
@@ -575,7 +583,18 @@ div.vertical-pinned-tabs-container-separator{
 #zen-sidebar-web-panel {
   background: var(--zen-main-browser-background) !important;
   -webkit-backdrop-filter: blur(5px) !important;
-  backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(10px) !important;
+	position: relative;
+	border-radius: 10px !important;
+	&::before{
+		content: '' !important;
+		position: absolute;
+		height: 100% !important;
+		width: 100% !important;
+    border-radius: 10px !important;
+    backdrop-filter: blur(15px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.45);
+	}
 }
 
 /* Floating Statusbar */
@@ -658,7 +677,7 @@ tab[busy] {
 
 /* trackpad gestures*/
 tabpanels .browserStack browser {
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
   /* Add initial border-radius to prevent sharp corners */
   border-radius: 0.75em !important;
 }
