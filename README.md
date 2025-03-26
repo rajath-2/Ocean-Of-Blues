@@ -20,7 +20,11 @@ set zen.view.hide-window-controls and zen.theme.essentials-favicon-bg to false i
 
 no zen mods are used for the theme</br>
 
-
+<pre>
+##Guide
+  simply download the userChrome and userContent file and place it in your chrome folder along with the natsumi files, restart browser and enjoy </br>
+  if you dont have a chrome folder follow this guide : <a href>https://docs.zen-browser.app/guides/live-editing</a>
+</pre>
 try out the theme to discover amazing animations from bouncing of tabs when new tab is opened to smooth url bar animation(slightly different from natsumi) with cool animations all around inspired by sameerasw. the theme even contains transpartent css code for multiple websites like instagram reddit youtube etc.
 
 ## Css used from other themes:
