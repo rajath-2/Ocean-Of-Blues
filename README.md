@@ -16,6 +16,7 @@ https://github.com/user-attachments/assets/a4f7ed32-95c8-40e0-b1e7-694466ad3ec9
 
 
 ## note:
+set zen.view.hide-window-controls to false in about:config </br>
 no zen mods are used for the theme</br>
 try out the theme to discover amazing animations from bouncing of tabs when new tab is opened to smooth url bar animation(slightly different from natsumi) with cool animations all around inspired by sameerasw. the theme even contains transpartent css code for multiple websites like instagram reddit youtube etc.
 
