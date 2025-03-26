@@ -992,3 +992,94 @@
 * {
   font-family: "JetBrains Mono", monospace !important;
 }
+/* ==== Apple Music tweaks ==== */
+@-moz-document domain(music.apple.com){
+  body{
+    background-color: transparent !important;
+  }
+  *{
+    --favoriteButtonBackground: var(--pageBG) !important;
+    --pageBG: rgba(0, 0, 0, 0.15) !important;
+    --playerBGFill: rgba(0, 0, 0, 0.5) !important;
+    --mobileNavigationBG: rgba(0, 0, 0, 0.4) !important;
+    --navSidebarBG: transparent !important;
+    --nowPlayingBackdropBG: rgba(0, 0, 0, 0.2) !important;
+    }
+    .songs-list__header-col-label--favorite-or-popular{
+      background-color: var(--natsumi-glass-background) !important;
+      border-radius: 1em !important;
+    }
+    .chrome-player{
+      margin-top: 7px !important;
+      background-color: transparent !important;
+      width: 80% !important;
+      border-radius: 10px !important;
+      &::before{
+        background: rgba(0, 0, 0, 0.5) !important;
+        border-bottom: none !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(30px) !important;
+      }
+    }
+    #scrollable-page{
+      margin-top: 0px !important;
+    }
+    .navigation-item{
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.2) !important;
+      }
+    }
+    #search-suggestions{
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    .lcd{
+      background: rgba(154, 154, 154, 0.2) !important;
+      border-radius: 10px !important;
+    }
+    .lcd__artwork-container{
+      border-top-left-radius: 10px !important;
+      border-bottom-left-radius: 10px !important;
+    }
+    .mini-player{
+      background-color: rgba(0, 0, 0, 0.2) !important;
+      border-radius: 10px !important;
+    }
+    .navigation{
+      background: transparent !important;
+    }
+    .navigation__scrollable-container{
+      background-color: rgba(0, 0, 0, 0.2) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+    .navigation__header{
+      background-color: rgba(0, 0, 0, 0.2) !important;
+      border-radius: 5px !important;
+    }
+    .navigation__native-cta{
+      display: none !important;
+    }
+    .side-panel-header-wrapper{
+      background-color: rgba(0 ,0, 0, 0.4) !important;
+      backdrop-filter: blur(10px) !important;
+    }
+    #uid-1, #uid-5{
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      backdrop-filter: blur(10px) !important;
+      height: 70% !important;
+      margin-top: 7px !important;
+      border-radius: 10px !important;
+      margin-right: 8% !important;
+    }
+  }
+  
+
+  @-moz-document domain(web.stremio.com) {
+    body, .nav-menu-container-Pl25j{
+      background: transparent !important; 
+    }
+    .menu-container-GcXNG, .menu-container-B6cqK{
+      background-color: #0f0d2098 !important;
+      backdrop-filter: blur(20px) !important;
+    }
+  }
