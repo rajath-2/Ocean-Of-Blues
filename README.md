@@ -1,5 +1,5 @@
 # Ocean-Of-Blues
-A custom css theme for Zen browser (inspired by many themes)
+A simple theme inspired by many other themes embracing transparency with some cool animations. It has transparent websites for many websites including instagram, apple music, etc 
 
 
 # Preview⏯️:
