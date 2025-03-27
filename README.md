@@ -7,6 +7,7 @@ A simple theme inspired by many other themes embracing transparency with some co
 
 ![image](https://github.com/user-attachments/assets/7c8a5648-392f-4f86-bbef-afcb9a76e00a)
 
+![image](https://github.com/user-attachments/assets/7c29eafd-d3f9-4204-b399-dc43a0c63a4b)
 
 
 https://github.com/user-attachments/assets/4de7329a-2402-497b-adb0-8c64962b56b2
