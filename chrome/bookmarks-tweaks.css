@@ -1,0 +1,99 @@
+/*
+Ocean-of-Blues - A userchrome for Zen Browser that that is inspired by many themes to make the browser look more asthetic.
+
+Copyright (c) [2025] [rajath]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Ocean-of-Blues uses code from others. The link to the original projects or
+their author(s) have been provided in the read me text.
+
+*/
+
+/* bookmarks tweasks place the bookmarks toolbar over the workspace icons and the bottom panel in the sidebar to recreate the look*/
+/*context menu transparency*/
+menupopup {
+    --panel-background: color-mix(in srgb, var(--zen-primary-color) 30%, black 60%) !important;
+}
+
+/*menu transparency*/
+panel {
+--panel-background: color-mix(in srgb, var(--zen-primary-color) 30%, black 60%) !important;
+}
+@media (-moz-bool-pref: "uc.bookmarks.center-toolbar") {
+  #PlacesToolbarItems {
+    justify-content: center;
+  }
+}
+toolbarbutton.bookmark-item{
+  margin: 4px !important;
+&:nth-child(3) {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  opacity: 0.6;
+  &:hover {
+    background: rgb(137, 168, 178, 0.4) !important;
+    transition: 0.3s !important;
+    opacity: 1 !important;
+  }
+}
+}
+toolbarbutton.bookmark-item:nth-child(2) {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  opacity: 0.6;
+  &:hover {
+    background: rgb(179, 200, 207, 0.4) !important;
+    transition: 0.3s !important;
+    opacity: 1;
+  }
+}
+toolbarbutton.bookmark-item:nth-child(1) {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  opacity: 0.6;
+  &:hover {
+    background: rgb(229, 225, 218, 0.4) !important;
+    transition: 0.3s !important;
+    opacity: 1;
+  }
+}
+#PlacesToolbarItems > toolbarbutton:nth-child(1) > image:nth-child(2) {
+  display: none;
+}
+#PlacesToolbarItems > toolbarbutton:nth-child(2) > image:nth-child(2) {
+  display: none;
+}
+#PlacesToolbarItems > toolbarbutton:nth-child(3) > image:nth-child(2) {
+  display: none;
+}
+#personal-bookmarks{
+  &:hover {
+  background: 0 !important;
+}
+}
+#bookmarksPanel {
+  background-color: rgb(84, 91, 119, 0.5) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+}
+#sidebar-box {
+  background-color: rgb(84, 91, 119, 0.8) !important;
+  backdrop-filter: blur(10px) saturate(180%);
+}

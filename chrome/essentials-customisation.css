@@ -1,0 +1,103 @@
+/*
+Ocean-of-Blues - A userchrome for Zen Browser that that is inspired by many themes to make the browser look more asthetic.
+
+Copyright (c) [2025] [rajath]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Ocean-of-Blues uses code from others. The link to the original projects or
+their author(s) have been provided in the read me text.
+
+*/
+
+/* Change the background color of the first pinned tab */
+#zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1) {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(0px) !important;
+  }
+  
+  /* Change the background color of the second pinned tab */
+  #zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1) {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(0px) !important;
+  }
+  
+  /* Change the background color of the third pinned tab */
+  #zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1) {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(0px) !important;
+  }
+  
+  /* Change the pinned background color of the first pinned tab pinned */
+  #zen-essentials-container > tab:nth-child(1) > stack:nth-child(1) > vbox:nth-child(1):is([selected],
+  [multiselected]) {
+    background: radial-gradient(circle, rgba(245,229,229,0.6) 0%, rgba(245,229,229,0.04) 60%, transparent 10%) !important;
+    box-shadow: none !important;
+  }
+  
+  /* Change the pinned background color of the second pinned tab pinned */
+  #zen-essentials-container > tab:nth-child(2) > stack:nth-child(1) > vbox:nth-child(1):is([selected],
+  [multiselected]) {
+    background: radial-gradient(circle, rgba(161,197,255,0.6) 0%, rgba(161,197,255,0.04) 60%, transparent 10%) !important;
+    box-shadow: none !important;
+  }
+  
+  /* Change the pinned background color of the third pinned tab pinned */
+  #zen-essentials-container > tab:nth-child(3) > stack:nth-child(1) > vbox:nth-child(1):is([selected],
+  [multiselected]) {
+    background: radial-gradient(circle, rgb(190, 49, 68, 0.6) 0%, rgba(190, 49, 68,0.04) 60%, transparent 10%) !important;
+    box-shadow: none !important;
+  }
+
+  #tabbrowser-tabs .tabbrowser-tab:is([zen-essential=true]){
+	/*background: rgb(9, 18, 44, 0.2) !important;*/
+	border-radius: 0.8rem !important;
+	margin: 1.5px !important;
+	scale: 0.95 !important;
+	width: auto !important;
+	&:nth-child(1){
+	   background: linear-gradient(77deg, rgba(217,224,224,0.2) 0%, rgba(13,16,16,0) 85%) !important;
+	}
+	&:nth-child(2){
+		background: linear-gradient(140deg, rgba(161,197,255,0.2) 0%, rgba(13,16,16,0) 85%) !important;
+	}
+	&:nth-child(3){
+		background: linear-gradient(110deg, rgba(190,49,68,0.3) 0%, rgba(13,16,16,0) 85%) !important;
+	}
+	&:hover{
+		background: transparent !important;
+		border: 2px solid rgb(179,200,207,0.8) !important;
+		scale: 0.9 !important;
+		margin: 0px !important;
+		transition: all 0.1s !important;
+	}
+} .tab-background{
+  transition: all 0.3s ease-in-out !important;
+	scale: 0 !important;
+}
+
+#tabbrowser-tabs
+.tabbrowser-tab:is([zen-essential="true"]):is([selected],[multiselected]){
+	background: transparent !important;
+} .tab-background[selected] {
+  scale: 1 !important;
+}
