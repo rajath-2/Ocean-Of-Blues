@@ -1,3 +1,31 @@
+/*
+Ocean-of-Blues - A userchrome for Zen Browser that that is inspired by many themes to make the browser look more asthetic.
+
+Copyright (c) [2025] [rajath]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Ocean-of-Blues uses code from others. The link to the original projects or
+their author(s) have been provided in the read me text.
+
+*/
+
 /* my-internet MIT License copy
 
 Copyright (c) 2025 Transparent Zen
@@ -19,3 +47,142 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
+
+/* Animations */
+/* Tab switch animation */
+#tabbrowser-arrowscrollbox,
+tab {
+  transition: all 0.3s ease-in-out !important;
+}
+
+tab:not([zen-essential="true"]):not([multiselected="true"]) .tab-background {
+  transition: all 0.3s ease-in-out !important;
+  scale: 0 !important;
+}
+
+tab:not([zen-essential="true"]) .tab-background[selected] {
+  scale: 1 !important;
+}
+
+#tabbrowser-tabpanels
+  > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35), filter 0.45s ease-in-out , opacity 0.35s ease-in-out !important;
+  scale: 0.9 !important;
+  opacity: 0;
+/*     filter: saturate(0) !important; */
+/*     filter: blur(20px) !important; */
+  /* 	left: -5vw; */
+}
+#tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {
+  scale: 1 !important;
+  opacity: 1 !important;
+/*   filter: saturate(1) !important; */
+/*     filter: none !important; */
+  /* 	left: 0 !important; */
+}
+
+/* website view animations */
+#browser:not(:has(.zen-glance-background)) #tabbrowser-tabpanels {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+}
+
+
+/* Loading tab animation */
+tab[busy] {
+  scale: 0.95 !important;
+  .tab-background {
+    opacity: 0.3 !important;
+  }
+}
+
+/* trackpad gestures*/
+tabpanels .browserStack browser {
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
+  /* Add initial border-radius to prevent sharp corners */
+  border-radius: 0.75em !important;
+}
+
+/* Previous animation*/
+.browserStack:has(
+    #historySwipeAnimationPreviousArrow:not([style="translate: none;"])
+  )
+  browser {
+  scale: 0.95 !important;
+  transform: translateX(3%) !important;
+  border-radius: 2em !important;
+}
+
+/* Next animation*/
+.browserStack:has(
+    #historySwipeAnimationNextArrow:not([style="translate: none;"])
+  )
+  browser {
+  scale: 0.95 !important;
+  transform: translateX(-3%) !important;
+  border-radius: 2em !important;
+}
+
+/* smoothen trackpad gestures */
+.browserStack browser[style*="transform: none"] {
+  border-radius: 0.75em !important;
+}
+
+/* ctrl tab visuals and animations */
+#ctrlTab-panel {
+  --panel-background: var(--zen-main-browser-background) !important;
+  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.15s !important;
+  scale: 0.7;
+}
+
+#ctrlTab-panel:has(.ctrlTab-preview:not([hidden="true"])) {
+  scale: 1 !important;
+}
+
+slot:nth-child(1) {
+  border-radius: 1em !important;
+  padding: 0 !important;
+}
+
+.ctrlTab-preview-inner {
+  /* 	padding: 0 !important; */
+  margin: 0 !important;
+  transition: all 0.2s ease-in-out;
+
+  .ctrlTab-canvas {
+    border-radius: 1em !important;
+    overflow: hidden;
+
+    img {
+      background-color: #000000 !important;
+    }
+  }
+
+  .ctrlTab-favicon-container {
+    justify-content: center !important;
+    transition: all 0.5s ease-in-out;
+
+    image {
+      border-radius: 50% !important;
+      transition: all 0.5s ease-in-out !important;
+      /* 			scale: 1.25 !important; */
+    }
+  }
+
+  .ctrlTab-label {
+    margin-top: 1.5em !important;
+  }
+}
+
+.ctrlTab-preview:focus > .ctrlTab-preview-inner {
+  outline: none !important;
+  /* border: none !important;   */
+  background-color: var(--sidebar-background-color) !important;
+  border-radius: 1em !important;
+  scale: 1.03 !important;
+
+  .ctrlTab-favicon-container {
+    image {
+      padding: 2px !important;
+    }
+  }
+}
