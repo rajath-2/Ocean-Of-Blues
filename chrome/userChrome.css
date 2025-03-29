@@ -47,7 +47,7 @@ their author(s) have been provided in the read me text.
 }
 /*media control tweaks*/
 #zen-media-controls-toolbar > toolbaritem:nth-child(1){
-	background: rgba(0,0,0, 0.2) !important;
+	background: rgba(0, 0, 0, 0.5) !important;
 	filter: saturate(140%) !important;
 	backdrop-filter: blur(20px)  !important;;
 	border: 1.5px solid rgb(179,200,207,0.4) !important;
