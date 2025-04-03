@@ -29,12 +29,12 @@ their author(s) have been provided in the read me text.
 /* bookmarks tweasks place the bookmarks toolbar over the workspace icons and the bottom panel in the sidebar to recreate the look*/
 /*context menu transparency*/
 menupopup {
-    --panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, transparent) !important;
+    --panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, black 20%) !important;
 }
 
 /*menu transparency*/
 panel {
---panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, transparent) !important;
+--panel-background: color-mix(in srgb, var(--zen-primary-color) 20%, black 20%) !important;
 }
 @media (-moz-bool-pref: "uc.bookmarks.center-toolbar") {
   #PlacesToolbarItems {
