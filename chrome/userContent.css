@@ -1059,3 +1059,30 @@ their author(s) have been provided above the used code.
       backdrop-filter: blur(20px) !important;
     }
   }
+
+/* notion transparensy tweaks */
+  @-moz-document domain(notion.so){
+    .notion-app-inner, .notion-cursor-listener, .notion-frame, .home-content{
+      background: transparent !important;
+    }
+    .notion-sidebar-container{
+      background-color: rgba(0, 0, 0, 0.2) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    .notion-sidebar > div:nth-child(2) {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      backdrop-filter: blur(50px) !important;
+    }
+    div.notion-selectable:nth-child(25) > div:nth-child(1){
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      backdrop-filter: blur(50px) !important;
+      border-radius: 10px !important;
+    }
+    .notion-cursor-listener > div:nth-child(2) > header:nth-child(1){
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      backdrop-filter: blur(50px) !important;
+      border-radius: 10px !important;
+      width: 80% !important;
+      margin-left: 10% !important;
+    }
+  }
